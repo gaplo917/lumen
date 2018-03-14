@@ -12,5 +12,10 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "OK";
+});
+
+$router->get('/10ms', function () use ($router) {
+    sleep(0.01);
+    return "OK";
 });
